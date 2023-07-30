@@ -15,10 +15,13 @@ class HomePage extends StatelessWidget with Base {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              if (locationC.cLocation.value == null)
+                CircularProgressIndicator(),
+              SizedBox(height: 20),
               locationC.cLocation.value != null
                   ? Text(
                       'Current Location Data:( Lat: ${locationC.cLocation.value!.latitude}, Lng: ${locationC.cLocation.value!.longitude})')
-                  : Text('Location data is not available.')
+                  : Text('GPS data is not available. Please wait a moment...')
             ],
           ),
         ),

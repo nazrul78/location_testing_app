@@ -12,7 +12,9 @@ class App extends StatelessWidget {
       defaultTransition: Transition.cupertino,
       smartManagement: SmartManagement.onlyBuilder,
       debugShowCheckedModeBanner: false,
-      // theme: AppTheme.themeData,
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
       home: HomePage(),
     );
   }
